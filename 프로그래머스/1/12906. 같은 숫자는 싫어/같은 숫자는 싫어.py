@@ -1,13 +1,6 @@
 def solution(arr):
-    answer = []
-    answer.append(arr[0])
-    
-    for n in range(1, len(arr)):
-        if arr[n-1] != arr[n]:
-            answer.append(arr[n])
-            
-        elif (n == len(arr)-1) and (arr[n-1] != arr[n]):
-            answer.append(arr[n-1])
-            
-    return answer
-        
+    result = []
+    for n in arr:
+        if len(result) == 0 or result[-1] != n:
+            result.append(n)
+    return result
