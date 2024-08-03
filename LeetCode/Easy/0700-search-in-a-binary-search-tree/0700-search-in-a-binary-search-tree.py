@@ -7,11 +7,6 @@ class TreeNode(object):
 
 class Solution(object):
     def searchBST(self, root, val):
-        """
-        :type root: TreeNode
-        :type val: int
-        :rtype: TreeNode
-        """
         if root is None or root.val == val:
             return root
 
