@@ -10,8 +10,10 @@ class Solution(object):
         def check(left, right):
             if left is None and right is None:
                 return True
+            
             if left is None or right is None:
                 return False
+            
             return (left.val == right.val) and check(left.right, right.left) and check(left.left, right.right)
 
         return check(root.left, root.right) if root else True
