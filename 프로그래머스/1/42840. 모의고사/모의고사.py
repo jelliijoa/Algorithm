@@ -7,7 +7,6 @@ def solution(answers):
     two = [2, 1, 2, 3, 2, 4, 2, 5] * math.ceil(len(answers) / 8)
     three = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5] * math.ceil(len(answers) / 10)
     
-    
     for n, a in zip(one, answers):
         if n == a:
             score[0] += 1
@@ -21,6 +20,5 @@ def solution(answers):
             score[2] += 1
     
     max_score = max(score)
-    answer = [i + 1 for i, s in enumerate(score) if s == max_score]
-    
-    return answer
+
+    return [i + 1 for i, s in enumerate(score) if s == max_score]
